@@ -8,6 +8,9 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import jakarta.persistence.ManyToOne;
+import com.mysite.sbb.user.SiteUser;
+
 @Entity
 @Getter
 @Setter
@@ -27,4 +30,7 @@ public class Question {
 
     @OneToMany(mappedBy = "question", cascade=CascadeType.REMOVE)
     private List<Answer> answerList;
+
+    @ManyToOne
+    private SiteUser author;
 }

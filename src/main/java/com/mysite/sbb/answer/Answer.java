@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import com.mysite.sbb.user.SiteUser;
 
 @Entity
 @Getter
@@ -23,4 +24,7 @@ public class Answer {
 
     @ManyToOne // Question 테이블의 기본키를 참조함.
     private Question question;
+
+    @ManyToOne
+    private SiteUser author;
 }
