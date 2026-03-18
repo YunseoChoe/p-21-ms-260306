@@ -10,6 +10,8 @@ import java.util.List;
 
 import jakarta.persistence.ManyToOne;
 import com.mysite.sbb.user.SiteUser;
+import java.util.Set;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 @Getter
@@ -35,4 +37,7 @@ public class Question {
 
     @ManyToOne
     private SiteUser author;
+
+    @ManyToMany
+    Set<SiteUser> voter;
 }
