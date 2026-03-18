@@ -22,6 +22,8 @@ public class Answer {
 
     private LocalDateTime createDate;
 
+    private LocalDateTime modifyDate;
+
     @ManyToOne // Question 테이블의 기본키를 참조함.
     private Question question;
 
