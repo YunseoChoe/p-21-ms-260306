@@ -9,7 +9,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
-                    <form th:action="@{/user/logout}" method="post" sec:authorize="isAuthenticated()">
+                    <form th:action="@{/user/logout}" method="post" sec:authorize="isAuthenticated()"> <!-- get이 아닌 post 요청이어야 함. -->
                         <button class="nav-link" type="submit">로그아웃</button>
                     </form>
                 </li>
